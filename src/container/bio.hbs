@@ -1,0 +1,124 @@
+<div>
+        <div>
+        <div>
+            <h1>{{name}}</h1>
+                <b>
+                    {{birthdate}}
+                </b>
+                <br/>Birth place:<em>{{birthplace}}</em>
+                <br/>Death date: <em>{{deathdate}}</em>
+                <br/>Death place: <em>{{deathplace}}</em>
+                <br/> Nationaliti: <em>{{nationality}}</em>
+                <br/>Ocupation: <em>{{occupation}}</em>
+        </div>
+        <hr/>
+        <div>
+            <b>Know for</b>
+        <ul>
+            {{#with known_for}}
+            <li>Theory of Relativity</li>
+            <li>E=mc²</li>
+            <li>Photoelectric Effect</li>
+            <li>Brownian Motion</li>
+            {{/with}}
+        </ul>
+        </div>
+        <hr/>
+        <div>
+            <b>Education</b>
+            <ul>
+                {{#each education}}
+                <ol>Degree: {{degree}}</ol>
+                <ol>Field: {{field}}</ol>
+                <ol>Institution: {{institution}}, {{year}}</ol>
+                {{/each}}
+            </ul>
+        </div>
+        <br/>
+        <div>
+            <b>Notable publications</b>
+            <ul>
+                {{#each notable_publications}}
+                <li>{{title}}</li>
+                    {{year}}
+                <br/>{{publisher}}
+                {{/each}}
+            </ul>
+        </div>
+        <br/>
+        <div>
+            <b>Partners</b>
+            <ul>
+                {{#each partners}}
+                <li>{{name}}</li>
+                    {{relationship}}, {{years}}
+                {{/each}}
+            </ul>
+        </div>
+        <br/>
+        <div>
+            <b>Awards</b>
+            <ul>
+                {{#each awards}}
+                    {{title}}, {{year}}
+                <br/>{{description}}
+                {{/each}}
+            </ul>
+        </div>
+        <br/>
+          <div>
+            <b>Influences</b>
+        <ul>
+            {{#with influences}}
+            <li>Isaac Newton</li>
+            <li>James Clerk Maxwell</li>
+            <li>Hermann Minkowski</li>
+            {{/with}}
+        </ul>
+        </div>
+        <br/>
+          <div>
+            <b>Influenced</b>
+        <ul>
+            {{#with influenced}}
+            <li>Niels Bohr</li>
+            <li>Erwin Schrödinger</li>
+            <li>Werner Heisenberg</li>
+            <li>Richard Feynman</li>
+            {{/with}}
+        </ul>
+        </div>
+        <br/>
+        <div>
+            <b>Quotes</b>
+            <ul>
+                {{#with quotes}}
+                <ol>Imagination is more important than knowledge.</ol>
+                <ol>I have no special talent. I am only passionately curious.</ol>
+                <ol>The important thing is not to stop questioning</ol>
+                <ol>The most beautiful thing we can experience is the mysterious. It is the source of all true art and all science.</ol>
+                {{/with}}
+            </ul>
+        </div>
+         <br/>
+        <div>
+            <b>major_discoveries</b>
+            <ul>
+                {{#each major_discoveries}}
+                    {{title}}, {{year}}
+                <br/>{{description}}
+                {{/each}}
+            </ul>
+        </div>
+        <hr/>
+        <div>
+            {{#with contributions}}
+            <b>{{title}}</b>
+            <br/>{{description}}
+            <br/>{{year}}
+            <br/>{{field}}
+            {{/with}}
+        </div>
+
+
+</div>
