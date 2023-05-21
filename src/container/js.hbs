@@ -1,0 +1,90 @@
+<div>
+    <h1>{{name}}</h1>
+    <div>
+    <strong>{{description}}</strong>
+    {{#with history}}
+        {{year}},{{founder}}
+    {{/with}}
+    </div>
+    <br/>
+    <div>
+        <ul>
+        {{#with types}}
+        <ul class="list-group">
+            <li class="list-group-item">Namber</li>
+            <li class="list-group-item">String</li>
+            <li class="list-group-item">Boolean</li>
+            <li class="list-group-item">Null</li>
+            <li class="list-group-item">Undefined</li>
+            <li class="list-group-item">Symbol</li>
+            <li class="list-group-item">Object</li>
+         </ul>
+        {{/with}}
+        </ul>
+    </div>
+    <br/>
+    <div>
+        {{#with syntax}}
+            <ul>
+                <li>{{variables}}</li>
+                <li>{{functions}}</li>
+                <li>{{conditionals}}</li>
+                <li>{{loops}}</li>
+                <li>{{classes}}</li>
+            </ul>
+        {{/with}}
+    </div>
+    <br/>
+    <div>
+        <ul>
+            {{#with features}}
+                <li>First-class functions</li>
+                <li>Closures</li>
+                <li>Dynamic typing</li>
+                <li>Prototype-based inheritance</li>
+                <li>Asynchronous programming with Promises and async/await</li>
+                <li>Modules with import/export statements</li>
+            {{/with}}
+        </ul>
+    </div>
+     <br/>
+    <div>
+        <ul>
+            {{#with libraries}}
+                <li>jQuery</li>
+                <li>React</li>
+                <li>Angular</li>
+                <li>Vue</li>
+                <li>Node</li>
+                <li>Express</li>
+                <li>Lodash</li>
+                <li>Moment</li>
+            {{/with}}
+        </ul>
+    </div>
+     <br/>
+    <div>
+        <ul>
+            {{#with tools}}
+                <li>Babel</li>
+                <li>Webpack</li>
+                <li>ESLint</li>
+                <li>Jest</li>
+                <li>Mocha</li>
+                <li>Chai</li>
+                <li>Selenium</li>
+                <li>Cypress</li>
+            {{/with}}
+        </ul>
+    </div>
+    <br/>
+    <div>
+        
+            {{#each community}}
+            <ul>
+                <b><li>{{name}}</li></b>
+                {{type}}
+            </ul>
+            {{/each}}
+        
+    </div>
