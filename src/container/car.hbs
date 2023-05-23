@@ -1,0 +1,136 @@
+<div>
+   <h1>{{make}} <span class="badge bg-secondary">{{model}}</span></h1>
+   <h2>{{year}}, {{color}}</h2>
+   <hr/>
+   <section>
+   <div>
+        {{#with features}}
+            {{#with interior}}
+                <br/><h2>Interior:</h2>
+                <div>
+                    <strong>Seats</strong>
+                    <br/><em>material - </em>{{seats.material}}
+                    <br/><em>color - </em>{{seats.color}}
+                    <br/><em>heated - </em>
+                    {{#if seats.heated}} 
+                        Yes
+                    {{/if}}
+                     <br/><em>ventilated - </em>
+                    {{#if seats.ventilated}} 
+                        Yes
+                    {{/if}}
+                </div>
+                <br/>
+                <div>
+                    <strong>Dashboard</strong>
+                    <br/><em>Material - </em>{{dashboard.material}}
+                    <br/><em>color - </em>{{dashboard.color}}
+                    <section>
+                        <b>display</b>
+                        {{#with dashboard.display}}
+                           <br/><em>type - </em> {{type}}
+                           <br/><em>size - </em>{{size}}
+                           <br/><em>resolution - </em>{{resolution}}
+                           <br/><em>touchscreen - </em>
+                            {{#if touchscreen}} 
+                                Yes
+                            {{/if}}
+                        {{/with}}
+                    </section>
+                </div>
+                <br/>
+                <div>
+                    <strong>Audio</strong>
+                    {{#with audio}}
+                        <br/><em>System - </em>{{system}}
+                        <br/><em>Speakers - </em>{{speakers}}
+                        <br/><em>Subwoofer - </em>
+                            {{#if subwoofer}} 
+                                Yes
+                            {{/if}}
+                        <br/><em>Bluetooth - </em>
+                            {{#if bluetooth}} 
+                                Yes
+                            {{/if}}
+                        <br/><em>USB - </em>
+                            {{#if USB}} 
+                                Yes
+                            {{/if}}
+                    {{/with}}
+                </div>
+            {{/with}}
+
+            {{#with exterior}}
+                <br/><h2>Exterior:</h2>
+            <div>
+                <strong>Wheels</strong>
+                {{#with wheels}}
+                    <br/><em>Size - </em>{{size}}
+                    <br/><em>Type - </em>{{type}}
+                    <br/><em>Color - </em>{{color}}
+                {{/with}}
+            </div>
+            <br/>
+             <div>
+                <strong>Headlights</strong>
+                {{#with headlights}}
+                    <br/><em>Type - </em>{{type}}
+                    <br/><em>Brightness - </em>{{brightness}}
+                    <br/><em>Automatic - </em>
+                    {{#if automatic}} 
+                                Yes
+                    {{/if}}
+                {{/with}}
+            </div>
+            <br/>
+             <div>
+                <strong>Sunroof</strong>
+                {{#with sunroof}}
+                    <br/><em>Type - </em>{{type}}
+                    <br/><em>Size - </em>{{size}}
+                    <br/><em>Automatic - </em>
+                    {{#if automatic}} 
+                                Yes
+                    {{/if}}
+                {{/with}}
+            </div>
+            {{/with}}  
+        {{/with}}
+
+        {{#with engine}}
+            <br/><h2>Engine:</h2>
+            <div>
+                <br/><em>Type - </em>{{type}}
+                <br/><em>Displacement - </em>{{displacement}}
+                <br/><em>Horsepower - </em>{{horsepower}}
+                <br/><em>Torque - </em>{{torque}}
+                <br/><em>Transmission</em>{{transmission.type }},{{transmission.gears}}
+            </div>
+        {{/with}}
+
+        {{#with fuel_economy}}
+            <br/><h2>Fuel_economy:</h2>
+            <div>
+                <br/><em>City - </em>{{city}}
+                <br/><em>Highway - </em>{{highway}}
+                <br/><em>Combined - </em>{{combined}}
+            </div>
+        {{/with}}
+
+        {{#with price}}
+            <br/><h2>Price:</h2>
+            <div>
+                <br/><em>base - </em>{{base}}
+                <br/><em>Destination - </em>{{destination}}
+                    <section>
+                <br/><em>Navigation - </em>{{options.navigation}}
+                <br/><em>Moonroof - </em>{{options.moonroof}}
+                <br/><em>Premium_paint - </em>{{options.premium_paint}}
+                </section>
+            <hr/>
+            <b>Total - {{total}}</b>
+            </div>
+        {{/with}}
+   </div>
+   </section>
+</div>
