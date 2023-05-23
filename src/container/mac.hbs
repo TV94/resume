@@ -1,0 +1,109 @@
+<div>
+   <h1>{{name}}<span class="badge bg-secondary"></span></h1>
+   <h2>{{description}}</h2>
+   <br/><b>Price  </b>{{price}}
+   <br/><b>category  </b>{{category}}
+   <hr/>
+   <section>
+   <div>
+        {{#with features}}
+            {{#with processor}}
+                <br/><strong>Processor:</strong>
+                <div>
+                    <br/><em>brand - </em>{{brand}}
+                    <br/><em>model - </em>{{model}}
+                    <br/><em>speed - </em>{{speed}}
+                    <br/><em>cores - </em>{{cores}}
+                    <br/><em>cache - </em>{{cache}}
+                </div>
+                <br/>
+                <div>
+                    {{/with}}
+                    <strong>memory</strong>
+                        {{#with memory}}
+                           <br/><em>type - </em> {{type}}
+                           <br/><em>size - </em>{{size}}
+                           <br/><em>speed - </em>{{speed}}
+                        {{/with}}
+                </div>
+                <br/>
+                <div>
+                    <strong>storage</strong>
+                    {{#with storage}}
+                        <br/><em>type - </em>{{type}}
+                        <br/><em>size - </em>{{size}}
+                    {{/with}}
+                </div>
+
+            {{#with display}}
+                <br/><strong>display:</strong>
+            <div>
+                    <br/><em>size - </em>{{size}}
+                    <br/><em>resolution - </em>{{resolution}}
+                    <br/><em>technology - </em>{{technology}}
+                    <br/><em>color_space - </em>{{color_space}}
+                    <br/><em>brightness - </em>{{brightness}}
+                    <br/><em>refresh_rate - </em>{{refresh_rate}}
+            </div>
+            {{/with}}
+            <br/>
+             <div>
+                <strong>graphics</strong>
+                {{#with graphics}}
+                    <br/><em>brand - </em>{{brand}}
+                    <br/><em>model - </em>{{model}}
+                    <br/><em>memory - </em>{{memory}}
+                {{/with}}
+            </div>
+            <br/>
+             <div>
+                    
+                {{#each ports}}
+                    <ul>
+                        <strong>ports</strong>
+                        <ol>{{type}}, {{count}}</ol>
+                        <br/>
+                        <ul>
+                            {{#with features}}
+                                <li>Charging</li>
+                                <li>DisplayPort</li>
+                                <li>Thunderbolt (up to 40 Gbps)</li>
+                                <li>USB 3.1 Gen 2 (up to 10 Gbps)</li>
+                            {{/with}}
+                        </ul>
+                    </ul>
+                {{/each}}
+             </div>
+             
+             <div>
+                <strong>battery</strong>
+                    {{#with battery}}
+                        <br/><em>type - </em>{{type}}
+                        <br/><em>capacity - </em>{{capacity}}
+                        <br/><em>life - </em>{{life}}
+                    {{/with}}
+             </div>
+             <br/>
+             <div>
+                <strong>dimensions</strong>
+                    {{#with dimensions}}
+                        <br/><em>height - </em>{{height}}
+                        <br/><em>width - </em>{{width}}
+                        <br/><em>depth - </em>{{depth}}
+                    {{/with}}
+             </div>
+             <br/>
+             <div>
+                <strong>operating system</strong>{{operating_system}}
+                <br><strong>accessories</strong>
+                {{#each accessories}}
+                <ul>
+                    <li>{{name}}</li>
+                    <li>price - {{price}}</li>
+                </ul>
+                {{/each}}
+             </div>
+        {{/with}}
+   </div>
+   </section>
+</div>
