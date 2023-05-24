@@ -1,0 +1,107 @@
+<div>
+    <h1>{{name}}</h1>
+</div>
+<div>
+    <ul>
+        {{#each users}}
+            <section>
+            <div>
+            <Strong>{{id}} - {{name}}</Strong>
+            <br/><b>gender - {{gender}}</b>
+            <br/><b>age - {{age}}</b>
+            <div/>
+            <br/>
+            <h2>friends</h2>
+            
+            {{#each friends}}
+                <section>
+                <ul>
+                    <div>
+                    <li><Strong>{{id}} - {{name}}</Strong></li>
+                    <b>gender - {{gender}}</b>
+                    <br/><b>age - {{age}}</b>
+                    <div/>
+                
+                    {{#each mutual_friends}}
+                    
+                    <ul>
+                        <h3>mutual friends</h3>
+                        <li><Strong>{{id}} - {{name}}</Strong></li>
+                        <b>gender - {{gender}}</b>
+                        <br/><b>age - {{age}}</b>
+                        </ul>
+                    
+                    {{#each mutual_friends}}
+                    
+                    <ul>
+                        <h3>mutual friends</h3>
+                        <li><Strong>{{id}} - {{name}}</Strong></li>
+                        <b>gender - {{gender}}</b>
+                        <br/><b>age - {{age}}</b>
+                    </ul>
+                {{/each}} 
+                {{/each}}  
+             </ul>
+             </section>
+
+                {{#each groups}}
+                <section>
+                    <h2>groups</h2>
+                <ul>
+                <div>
+                    <li><Strong>{{id}} - {{name}}</Strong></li>
+                    <b>{{description}}</b>
+                </div>
+                <br/>
+                <div>
+                    {{#each members}}
+                    <ul>
+                    <section>
+                        <div>
+                    <li><Strong>{{id}} - {{name}}</Strong></li>
+                    <b>gender - {{gender}}</b>
+                    <br/><b>age - {{age}}</b>
+                    </div>
+                    </section>
+                    </ul>
+                    {{/each}}
+                </div>
+                </ul>
+                </section>
+                {{/each}}
+            {{/each}}  
+
+            <div>
+            
+                {{#each groups}}
+                
+                <section>
+                    <h2>groups</h2>
+                <ul>
+                <div>
+                    <li><Strong>{{id}} - {{name}}</Strong></li>
+                    <b>{{description}}</b>
+                </div>
+                <br/>
+                <div>
+                    {{#each members}}
+                    <ul>
+                    <section>
+                        <div>
+                    <li><Strong>{{id}} - {{name}}</Strong></li>
+                    <b>gender - {{gender}}</b>
+                    <br/><b>age - {{age}}</b>
+                    </div>
+                    </section>
+                    </ul>
+                    {{/each}}
+                </div>
+                </ul>
+                </section>
+                {{/each}}
+            
+        </div>
+        </section>
+        {{/each}}
+    </ul>
+</div>
