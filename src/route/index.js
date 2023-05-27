@@ -748,8 +748,10 @@ router.get('/facebook', function (req, res) {
         ],
       },
     ],
-
-
+  })
+//                  ↑↑ сюди вводимо JSON дані
+})
+  
 router.get('/mac', function (req, res) {
   // res.render генерує нам HTML сторінку
 
