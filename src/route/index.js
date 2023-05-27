@@ -1023,7 +1023,7 @@ router.get('/js', function (req, res) {
 // router.get Створює нам один ентпоїнт
 
 //           ↙ тут вводимо шлях (PATH) до сторінки
-router.get('bootstrap', function (req, res) {
+router.get('/bootstrap', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
