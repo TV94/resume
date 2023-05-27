@@ -1,0 +1,124 @@
+<div>
+    <div class="card">
+        <div class="card-body">
+    {{#with heading}}
+        <main>
+                <div class="card">
+                    <div class="card-body">
+                {{#with main}}
+                    <h1>{{title}}</h1>
+                    <br/>
+                    <p>{{text}}</p>
+                    <button class="btn btn-primary" type="submit">
+                        {{button_text.solid}}
+                    </button>
+                    <br/>
+                    <br/>
+                    <button type="button" class="btn btn-outline-primary">
+                        {{button_text.outline}}
+                        </button>
+                {{/with}}
+                </div>
+                </div>
+                <br/>
+
+                    <div class="card">
+                    <div class="card-body">
+                {{#with second}}
+                    <h2>{{title}}</h2>
+                    <br/>
+                    <p>{{text}}</p>
+                        <button class="btn btn-secondary" type="submit">
+                            {{button_text.solid}}
+                        </button>
+                    <br/>
+                    <br/>
+                    <button type="button" class="btn btn-outline-secondary">
+                        {{button_text.outline}}
+                        </button>
+                {{/with}}
+                </div>
+                </div>
+                <br/>
+
+                  <div class="card">
+                    <div class="card-body">
+                {{#with subblock}}
+                    <h3>{{title}}</h3>
+                    <br/>
+                    <p>{{text}}</p>
+                        <button class="btn btn-dark" type="submit">
+                            {{button_text.solid}}
+                        </button>
+                    <br/>
+                    <br/>
+
+                    <button type="button" class="btn btn-outline-dark">
+                        {{button_text.outline}}
+                        </button>
+                {{/with}}
+                </div>
+                </div>
+        </main>
+    {{/with}}
+    </div>
+    </div>
+    <br/>
+        <div class="card">
+        <div class="card-body">
+            {{#with nested_display}}
+                <h1 class="display-1">{{title}}</h1>
+                <br/>
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="display-4">
+                            {{children_display.title}}
+                        </h4>
+                        <br/>
+                        <p>{{children_display.text}}</p>
+                            <br/>
+                            <button type="button" class="btn btn-outline-warning">
+                        {{children_display.button.text}}
+                    </button>
+                    </div>
+                </div>
+                 <br/>
+            <div>
+                <h6 class="display-6">
+                    {{header_text}}
+                </h6>
+                <br/>
+                <button class="btn btn-info" type="submit">
+                    {{button.text}}
+                </button>
+            </div>
+            {{/with}}
+            </div>
+        </div>
+        <br/>
+
+        <div class="card">
+            <div class="card-body">
+                {{#with paragraph}}
+                    <p class="text-uppercase">{{title}}</p>
+                    <p class="text-lowercase">{{text}}</p>
+                    <a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href={{button.url}}>
+                    {{button.text}}
+                    </a>
+                    <br/>
+                    <br/>
+                    <div class="card">
+                        <div class="card-body">
+                            <ul>
+                                {{#each list_name}}
+                                    <br/><li><a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href={{button.url}}>
+                                    {{text}}
+                                    </a></li>
+                                {{/each}}
+                            </ul>
+                        </div>
+                    </div>
+                {{/with}}
+            </div>
+        </div>
+</div>
