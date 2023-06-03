@@ -1037,12 +1037,31 @@ router.get('/bootstrap', function (req, res) {
 
 
 
-    router.get('/task31', function (req, res) {
+   // ================================================================
+
+// router.get Створює нам один ентпоїнт
+
+//           ↙ тут вводимо шлях (PATH) до сторінки
+router.get('/task31', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('task31', {
-    layout: 'basic',
+    navigation: {
+      links: [
+        {
+          text: 'Home',
+          href: 'https://github.com/',
+        },
+        {
+          text: 'Contacts',
+          href: 'https://www.google.com/',
+        },
+        {
+          text: 'Help',
+          href: 'https://www.youtube.com/',
+        },
+      ],
       button: {
         text: 'Lets start',
         href: 'https://nodejs.org/en/',
@@ -1269,7 +1288,7 @@ router.get('/bootstrap', function (req, res) {
         {
           name: 'Stark Industries',
           link: 'https://www.starkindustries.com/',
-          },
+        },
       ],
     },
   })
