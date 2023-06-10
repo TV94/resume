@@ -1,0 +1,207 @@
+
+    {{#with navigation}}
+        <div class="card mb-3">
+            <div class="col-12">
+                <div class="nav">
+        {{#each links}}
+                <div class="nav-item">
+                    <a class="nav-link active" aria-current="page" href={{href}}>{{text}}</a>
+                </div>
+        {{/each}}
+                    <a class="nav-link disabled">Disabled</a>
+                </div>
+            </div>
+        </div>
+    {{/with}}
+
+    <div class="col-8 mt-5 mb-5">
+        <ol class="breadcrumb">
+    {{#each breadcrumb}}
+    
+        <li class="breadcrumb-item"> 
+            <a {{#if @last}}disabled{{/if}}href={{url}} >{{name}}</a>
+        </li>
+    {{/each}}
+    </ol>
+    </div>
+
+<div class="row" >
+    <div class="col-6">
+    {{#with productData}}
+        
+            
+                <div class="card">
+                <img src={{img}} class="card-img-top">
+                </div>
+            </div>
+
+            <div class="col-6">
+                {{#with item}}
+                    <table class="table">   
+                    <thead>
+                        <tr>
+                            {{#each head}}
+                            <th>{{this}}</th>
+                            {{/each}}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each body}}
+                        <tr>
+                            {{#with this}}
+                        <th>{{this.[0]}}</th>
+                        <td>{{this.[1]}}</td>
+                        <td>{{this.[2]}}</td>
+                            {{/with}}
+                        </tr> 
+                        {{/each}}  
+                    </tbody>
+                    </table>
+                {{/with}}
+        </div>
+
+        
+
+        
+            <div class="col-6">
+                {{#with info}}
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">{{title}}</h5>
+                            <p class="card-text">{{about}}</p>
+                            <h3 >{{price}}</h3>
+                                {{#each category}}
+                                    {{#if isHot}}
+                                    <span class="badge text-bg-warning rounded-pill">
+                                        Hot!
+                                    </span>
+                                    {{/if}}
+                                    {{#if isNew}}
+                                    <span class="badge text-bg-primary rounded-pill">
+                                        Нова
+                                    </span>
+                                    {{/if}}
+                                    {{#if isBonus}}
+                                    <span class="badge text-bg-info rounded-pill">
+                                        Ноут
+                                    </span>
+                                    {{/if}}
+                                {{/each}}
+                        </div>
+                    </div>
+                {{/with}}
+            </div>
+
+            <div class="col-6">
+                    {{#with param}}
+                    <div class="card">
+                    <div class="card-header">
+                        {{title}}
+                    </div>
+                    {{#each list}}
+                    <ul class="list-group list-group-flush">
+                            {{#with this}}
+                        {{this.[0]}}
+                        {{this.[1]}}
+                        {{this.[2]}}
+                            {{/with}}
+                    </ul>
+                    {{/each}}
+                    {{/with}}
+           </div>
+           {{#with alert}}
+            {{#if isError}}
+           <div class="alert alert-danger text-danger" role="alert">
+            {{text}}
+           </div>
+            {{/if}}
+           {{/with}}
+    {{/with}}
+    </div>
+    <div class="row mt-3 mb-5">
+        <div class="card">
+        <div class="col-12">
+                <button type="button" class="btn btn-warning">Повідомлення</button>
+                <button type="button" class="btn btn-outline-danger">Вподобати</button>
+                <button type="button" class="btn btn-success">Швидка доставка</button>
+                <button type="button" class="btn btn-outline-success">Доставка</button>
+            </div>
+        </div>
+    </div>
+    <hr class="mt-5 mb-3"/>
+
+    <div>
+        {{#with goodsOtherBlock}}
+            <p class="h3 text-center">{{title}}</p>
+
+             <div class="row mb-3">
+        {{#each cards}}    
+            <div class="col-4 g-2">
+                    <div class="card">
+                        <img src={{image}} class="card-img-top" >
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                {{title}}
+                                {{#if isHot}}
+                                    <span class="badge text-bg-warning rounded-pill">
+                                        Hot!
+                                    </span>
+                                {{/if}}
+                                {{#if idNew}}
+                                    <span class="badge text-bg-primary rounded-pill">
+                                        Нове
+                                    </span>
+                                {{/if}}
+                            </h5>
+                            <p class="card-text">{{description}}</p>
+                        </div>
+                    </div>
+                </div>
+        {{/each}}
+         </div>
+        {{/with}}
+    </div>
+
+    <hr class="mt-5"/>
+
+    <div class="text-center">
+    <div class="card text-bg-success p-2 mb-5 mt-5">
+        <div class="col-12">
+            {{#with service}}
+            <p class="h2">{{title}}</p>
+                <p class="card-text">{{description}}</p>
+            {{#each buttons}}
+                <a href={{link}} class="btn btn-primary">
+                    {{text}}
+                </a>
+            {{/each}}
+            </div>
+           </div>
+           {{/with}}
+        </div>
+    </div>
+    </div>
+    <hr/>
+
+        
+        <div class="row">
+            <div class="nav nav-flex-column">
+    {{#each footer}}
+            <ul>
+                <div class="nav-item text-sm">
+                    {{#each this}}
+                        {{#if @last}}   
+                    <a class="nav-link disabled" aria-current="page" href={{link}}>{{text}}</a>
+                    
+                        {{else}}
+                    <a class="nav-link" aria-current="page" href={{link}}>{{text}}</a>
+                        {{/if}}
+                    {{/each}}
+                </div>
+            </ul>
+    {{/each}}
+    </div>
+    </div>
+    
+    
+
