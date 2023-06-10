@@ -1,0 +1,25 @@
+
+ <div class="row">
+            {{#each cards}}
+            <div class="col-3 gx-2">
+               <div class="card text-bg-secondary mb-3" style="max-width: 18rem;" >
+                <div class="card-header">
+                    <h6>{{title}}</h6>
+                    {{#if isNew}}
+                        <span class="badge text-bg-success rounded-pill">
+                            Нова
+                        </span>
+                    {{/if}}
+                    {{#if isTop}}
+                        <span class="badge text-bg-danger rounded-pill">
+                            Top
+                        </span>
+                    {{/if}}
+                </div>
+                <div class="card-body">
+                    <p class="card-text">{{description}}</p>
+                </div>
+                </div>
+                </div>
+            {{/each}}
+       </div>
