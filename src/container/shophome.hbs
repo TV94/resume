@@ -18,30 +18,7 @@
 
     {{#with newsBlock}}
         <h1 class="mt-5 mb-3 text-center">{{title}}</h1>
-            <div class="row">
-            {{#each cards}}
-            <div class="col-3 gx-2">
-               <div class="card text-bg-secondary mb-3" style="max-width: 18rem;" >
-                <div class="card-header">
-                    <h6>{{title}}</h6>
-                    {{#if isNew}}
-                        <span class="badge text-bg-success rounded-pill">
-                            Нова
-                        </span>
-                    {{/if}}
-                    {{#if isTop}}
-                        <span class="badge text-bg-danger rounded-pill">
-                            Top
-                        </span>
-                    {{/if}}
-                </div>
-                <div class="card-body">
-                    <p class="card-text">{{description}}</p>
-                </div>
-                </div>
-                </div>
-            {{/each}}
-       </div>
+         {{>shoppost}}
     {{/with}}
     <hr/>
     {{#with goodsBlock}}
@@ -61,31 +38,7 @@
             {{/each}}
         </ul>
     </div>
-       <div class="row mb-3">
-        {{#each cards}}    
-            <div class="col-4 g-2">
-                    <div class="card">
-                        <img src={{image}} class="card-img-top" >
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                {{title}}
-                                {{#if isHot}}
-                                    <span class="badge text-bg-warning rounded-pill">
-                                        Hot!
-                                    </span>
-                                {{/if}}
-                                {{#if isNew}}
-                                    <span class="badge text-bg-primary rounded-pill">
-                                        Нове
-                                    </span>
-                                {{/if}}
-                            </h5>
-                            <p class="card-text">{{description}}</p>
-                        </div>
-                    </div>
-                </div>
-        {{/each}}
-         </div>
+       {{>shopcard}}
     {{/with}}
     <hr/>
     <div class="card text-bg-dark mb-3 mt-3">
@@ -107,30 +60,7 @@
         </div>
     </div>
     <hr/>
-    <div class="text-center">
-    <div class="card text-bg-success p-2 mb-3 mt-3">
-        <div class="col-12">
-            {{#with service}}
-            <p class="h2">{{title}}</p>
-                <p class="card-text">{{description}}</p>
-            {{#each buttons}}
-                <a href={{link}} class="btn btn-primary">
-                    {{text}}
-                </a>
-            {{/each}}
-            </div>
-           </div>
-           {{/with}}
-        </div>
+    <div>
+        {{>shopaction}}
     </div>
-    </div>
-    <hr/>
-        <div class="nav nav-flex-column mt-3">
-    {{#each footer}}
-        <div class="naw-item">
-            <ul>
-                <a href={{link}} class="nav-link-primary">{{text}}</a>
-            </ul>
-        </div>
-    {{/each}}
-    </div>
+    {{>shopfooter}}
