@@ -1,0 +1,49 @@
+<div>
+    {{>shopheader}}
+</div>
+
+ <div class="col-8 mt-5 mb-5">
+        <ol class="breadcrumb">
+    {{#each breadcrumb}}
+    
+        <li class="breadcrumb-item"> 
+            <a {{#if @last}}disabled{{/if}}href={{url}} >{{name}}</a>
+        </li>
+    {{/each}}
+    </ol>
+    </div>
+
+    <div class="mb-3 mt-3">
+            {{#with newsData}}
+        <div class="card mb-3">
+            <img src={{photo}} class="card-img-top">
+        </div>
+
+            <div>
+                {{#with head}}
+                <p class="h1">{{heading}}</p>
+                <p>{{description}}</p>
+                {{/with}}
+            </div>
+            {{#each body}}
+                    <ul>
+                        <p class="h3">{{title}}</p>
+                        <p>{{text}}</p>
+                    </ul>
+                {{/each}}
+        {{/with}}
+    </div>
+        <hr/>
+
+        <div>
+            {{#with newsOtherBlock}}
+                <p class="h3">{{title}}</p>
+                {{>shoppost}}
+            {{/with}}
+            
+        </div>
+
+    <div>
+        {{>shopaction}}
+    </div>
+    {{>shopfooter}}
