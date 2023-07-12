@@ -1028,7 +1028,7 @@ router.get('/bootstrap', function (req, res) {
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('bootstrap', {
-    layout: 'default',
+    layout: 'bootstrap',
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
@@ -3336,8 +3336,6 @@ router.get('/shopreview', function (req, res) {
 
 // ================================================================
 
-// router.get Створює нам один ентпоїнт
-
 //           ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/shopcatalog', function (req, res) {
   // res.render генерує нам HTML сторінку
@@ -3712,5 +3710,14 @@ router.get('/shopcatalog', function (req, res) {
 })
 
 // ================================================================
+
+//           ↙ тут вводимо шлях (PATH) до сторінки
+router.get('/index8', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('index8', {
+    layout: 'index8',
+// router.get Створює нам один ентпоїнт
 // Підключаємо роутер до бек-енду
 module.exports = router
