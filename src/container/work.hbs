@@ -23,25 +23,23 @@
                             {{/if}}
                         </div>
                         <br>
-                        <div>
+                        <div class="mb-2">
                             {{#if company.url}}
                             {{> link text=company.name href=company.url blank=true noLine=true}}
                             {{else}}
                                 <b>{{company.name}} </b>
                             {{/if}}
                             </div>
-                        <br>
-                        <br>
                         
-                        <div> 
+                        <div class="mb-2"> 
                             <strong>Project ({{projectAmount}})</strong>
                         </div>
-                        <br>
+                        
                         <ul> 
                             {{#each projects}}
                             <li>
-                                <div>{{> link text=name href=url blank=true noLine=true}}</div>
-                                <br>
+                                <div class="mb-2">{{> link text=name href=url blank=true noLine=true}}</div>
+                                
                                 <div>
                                     <p>{{about}}</p>
                                 </div>
